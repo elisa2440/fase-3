@@ -102,7 +102,7 @@ f.write(str(sumaAllocados-40704)+","+str(sumaAsignados)+","+str(sumaDisponibles)
 f.close()
 
 # (*)
-sumaDisponibles = sumaDisponibles + sumaDevRev
+sumaDisponibles = sumaDisponibles + sumaDevRev + 2**(32-15)
 
 # Total blocks for fase 3 are available plus allocated blocks
 sumaTotal = sumaDisponibles + sumaAsigTot
