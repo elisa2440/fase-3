@@ -98,7 +98,7 @@ sumaDisponibles = sumaDisponibles + sumaPreAprobados
 
 f = open("new_pie.txt", "w")
 f.write("alloc,assig,libres,rev_dev\n\n")
-f.write(str(sumaAllocados-40704)+","+str(sumaAsignados)+","+str(sumaDisponibles)+","+str(sumaDevRev))
+f.write(str(sumaAllocados-40704)+","+str(sumaAsignados)+","+str(sumaDisponibles+2**(32-15))+","+str(sumaDevRev))
 f.close()
 
 # (*)
