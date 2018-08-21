@@ -97,12 +97,12 @@ print sumaReservados
 sumaDisponibles = sumaDisponibles + sumaPreAprobados
 
 f = open("new_pie.txt", "w")
-f.write("alloc,assig,libres,rev_dev\n\n")
-f.write(str(sumaAllocados-40704)+","+str(sumaAsignados)+","+str(sumaDisponibles+2**(32-15))+","+str(sumaDevRev))
+f.write("alloc,assig,libres,rev_dev,inf_critica\n\n")
+f.write(str(sumaAllocados-40704)+","+str(sumaAsignados)+","+str(sumaDisponibles)+","+str(sumaDevRev)+","+str(2**(32-15)))
 f.close()
 
 # (*)
-sumaDisponibles = sumaDisponibles + sumaDevRev + 2**(32-15)
+sumaDisponibles = sumaDisponibles + sumaDevRev
 
 # Total blocks for fase 3 are available plus allocated blocks
 sumaTotal = sumaDisponibles + sumaAsigTot
@@ -115,7 +115,8 @@ st = {
         "disponibles" : format(sumaDisponibles,',d').replace(',','.'),
         "totales" : format(sumaTotal,',d').replace(',','.'),
         "devueltos/revocados" : format(sumaDevRev,',d').replace(',','.'),
-        "actualizado" : str(hoy)
+        "actualizado" : str(hoy),
+	"infraestructura_critica" : str(2**(32-15)
     }
 }
 
