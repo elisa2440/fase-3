@@ -1,0 +1,3 @@
+alloc,assig,libres,rev_dev,inf_critica
+
+2045184,91136,2019584,955648,131072

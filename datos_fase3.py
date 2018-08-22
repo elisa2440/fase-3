@@ -104,8 +104,8 @@ f.close()
 # (*)
 sumaDisponibles = sumaDisponibles + sumaDevRev
 
-# Total blocks for fase 3 are available plus allocated blocks
-sumaTotal = sumaDisponibles + sumaAsigTot
+# Total blocks for fase 3 are available plus allocated blocks plus IC
+sumaTotal = sumaDisponibles + sumaAsigTot + 2**(32-15)
 
 hoy = date.today()
 
