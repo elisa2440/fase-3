@@ -116,7 +116,7 @@ st = {
         "totales" : format(sumaTotal,',d').replace(',','.'),
         "devueltos/revocados" : format(sumaDevRev,',d').replace(',','.'),
         "actualizado" : str(hoy),
-	"infraestructura_critica" : str(2**(32-15)
+	"infraestructura_critica" : str(2**(32-15))
     }
 }
 
